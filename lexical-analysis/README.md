@@ -21,3 +21,12 @@ index.html
 - 右上角是通过源代码和配置文件分析出的单词符号及其二元式(种别编码，二元式)
 - 右下角显示词法分析的过程，错误的时候也能显示错误的位置行号和错误提示;
 
+
+
+## 演示
+
+![](F:\各种作业\实验作业\编译原理\compiler\lexical-analysis\lex_1.png)
+
+
+
+地址: [compiler.acring.me.](compiler.acring.me.)
