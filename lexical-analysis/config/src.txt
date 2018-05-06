@@ -1,0 +1,23 @@
+begin
+	begin
+	
+		begin 
+		 a:=1
+ 		end;
+ 		
+ 	  begin 
+		 b:=1
+    end;
+    q:=10
+	end;
+	
+	x:=9;
+	y:=11;
+	z:=12
+	while A<C and B<D do
+            while A>B do 
+               if M=N then C:=D
+             else while A<=D do
+                 A:=D
+end
+#~

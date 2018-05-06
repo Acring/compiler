@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lexical analysis</title>
+	<script type="text/javascript" src="js/analysis.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="main">
+		<h3 class="title">词法分析</h3>
+		<div class="source">
+			<div class="source-code window">
+				<span>源程序</span>
+				<textarea id="src"></textarea>
+			</div>
+			<div class="define-list window">
+				<span>编码定义</span>
+				<div class="container">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>类型</th>
+								<th>单词符号</th>
+								<th>种别编码</th>
+							</tr>
+						</thead>
+						<tbody id="define-container">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="btn-group">
+				<button class="btn button-blue">加载源代码
+					<input onchange="handleFile(this.files, 3)" type="file" accept=".txt" />
+				</button>
+				<button class="btn button-green">加载保留字
+					<input onchange="handleFile(this.files, 0)" type="file" accept=".txt" />
+				</button>
+				<button class="btn button-green">加载运算符
+					<input onchange="handleFile(this.files, 1)" type="file" accept=".txt" />
+				</button>
+				<button class="btn button-green">加载分隔符
+					<input onchange="handleFile(this.files, 2)" type="file" accept=".txt" />
+				</button>
+				<button class="btn button-red" onclick="analyse()">开始分析</button>
+			</div>
+		</div>
+
+		<div class="result">
+			<div class="result-list window">
+				<span>二元式</span>
+				<div class="container" >
+					<table class="table">
+						<thead>
+							<tr>
+								<th>单词符号</th>
+								<th>种别编码</th>
+								<th>内码值</th>
+							</tr>
+						</thead>
+						<tbody id="result-container">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="msg window" >
+				<span>过程信息</span>
+				<textarea id="msg"></textarea>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
