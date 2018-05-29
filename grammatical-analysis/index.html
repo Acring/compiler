@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>grammatical analysis</title>
+  <script src="./js/mermaid.min.js"></script>
+  <link rel="stylesheet" href="./css/mermaid.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/analysis.js"></script>
+</head>
+<body>
+  <div class="main">
+      <div class="resource">
+        <span class="tip">文法</span>
+        <span class="tip2">语言</span>
+        <button class="btn button-green" onclick="analyse()">分析</button>
+        <textarea id="grammar">S->BB
+B->aB | b</textarea>
+        <textarea id="lang"></textarea>
+      </div>
+      <div class="DFA">
+        <span class="tip">DFA</span>
+        <div id='mermaid' class="mermaid">
+
+        </div>
+      </div>
+  </div>
+  <div class="result-line">
+    <div class="first">
+      <span class="tip">
+        FIRST集
+      </span>
+      <table>
+        <tbody id='first'>
+        </tbody>
+      </table>
+    </div>
+    <div class="follow">
+      <span class="tip">
+        FOLLOW集
+      </span>
+      <table >
+        <tbody id='follow'>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="sheet">
+      <span class="tip">
+        SLR分析表
+      </span>
+      <table id='sheet'>
+      </table>
+    </div>
+  </div>
+  <div class="main">
+    <div class="process">
+      <span class="tip">
+        分析过程
+      </span>
+      <table id='process'>
+
+      </table>
+    </div>
+  </div>
+
+  <script>mermaid.initialize({startOnLoad:false, flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true,
+            width: '100%',
+            height: '100%'
+
+        }});</script>
+</body>
+</html>

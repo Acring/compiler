@@ -60,24 +60,24 @@ textarea:focus{
 }
 
 
-textarea::-webkit-scrollbar  
-{  
-    width: 5px;  
-    height: 5px;  
-    background-color: #F5F5F5;  
-}  
-
-textarea::-webkit-scrollbar-track  
-{  
-    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);  
-    border-radius: 5px;  
-    background-color: #ffffff;  
+textarea::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+    background-color: #F5F5F5;
 }
 
-textarea::-webkit-scrollbar-thumb  
-{  
-    border-radius: 10px;  
-    background-color: #84a488;  
+textarea::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #84a488;
 }
 
 
@@ -88,14 +88,14 @@ textarea::-webkit-scrollbar-thumb
 	background-color: #ffffff;
 
 }
-.window span{ 
+.window span{
 	position: absolute;
 	top: 0;
 	right: 0;
 	padding: 2px;
 	font-weight: 600;
 	border: 1px solid #c0c0c0;
-	border-right: 0; 
+	border-right: 0;
 	border-top: 0;
 	color: #c0c0c0;
 	background-color: #ffffff;
@@ -114,33 +114,33 @@ textarea::-webkit-scrollbar-thumb
 	position: relative;
 }
 
-.result-container{	
+.result-container{
 	position: relative;
 }
 
 .container{
 	flex: 1;
-	overflow-y: auto;	
+	overflow-y: auto;
 }
 
-.container::-webkit-scrollbar  
-{  
-    width: 5px;  
-    height: 5px;  
-    background-color: #F5F5F5;  
-}  
-
-.container::-webkit-scrollbar-track  
-{  
-    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);  
-    border-radius: 5px;  
-    background-color: #ffffff;  
+.container::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+    background-color: #F5F5F5;
 }
 
-.container::-webkit-scrollbar-thumb  
-{  
-    border-radius: 10px;  
-    background-color: #84a488;  
+.container::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.container::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #84a488;
 }
 
 
@@ -262,5 +262,3 @@ textarea::-webkit-scrollbar-thumb
 		background-color: #6A8372;
 	}
 }
-
-
