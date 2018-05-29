@@ -52,7 +52,7 @@ end
 
 ## 演示
 
-![](F:\各种作业\实验作业\编译原理\compiler\lexical-analysis\lex_1.png)
+![](./lex_1.png)
 
 
 

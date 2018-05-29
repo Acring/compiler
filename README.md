@@ -12,3 +12,11 @@
 
 ## 词法分析
 
+![](./lexical-analysis/lex_1.png)
+
+
+
+## 语法分析
+
+![](./grammatical-analysis/shot.png)
+
