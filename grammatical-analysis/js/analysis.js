@@ -24,6 +24,12 @@ function init(){
   log = ''  // 日志
   ACTION = []
   GOTO = []
+  document.getElementById('process').innerHTML = '';
+  document.getElementById('sheet').innerHTML = '';
+  document.getElementById('first').innerHTML = '';
+  document.getElementById('follow').innerHTML = '';
+
+
 }
 
 function analyse(){  // 开始分析
@@ -85,9 +91,8 @@ function analyse(){  // 开始分析
 
 // 显示分析过程
 function showProcess() {
-  if(lang.trim().length == 0){
-    alert('语言为空');
-    return;
+  if(lang.trim() == ''){
+  	return;
   }
   processHTML = `<tr>
     <th>步骤</th>
