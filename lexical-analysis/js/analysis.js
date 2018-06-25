@@ -151,7 +151,7 @@ function analyse(){  // 开始分析
 		curWord = '';
 		curChar = line[column];
 		console.log(line)
-		while(column < line.length - 1){
+		while(column <= line.length - 1){
 			if(isAlpha(curChar)){  // 匹配字符
 				do{
 					curWord += curChar;

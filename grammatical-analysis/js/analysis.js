@@ -121,7 +121,7 @@ function showProcess() {
       flag = false;
     }else if (ACTION[statusStack[statusStack.length-1]][lang[pos]][0] == 's') { // 入栈
       description = `ACTION(${statusStack[statusStack.length-1]}, ${lang[pos][0]})=${ACTION[statusStack[statusStack.length-1]][lang[pos]]}`
-      statusStack.push(ACTION[statusStack[statusStack.length-1]][lang[pos]][1])
+      statusStack.push(ACTION[statusStack[statusStack.length-1]][lang[pos]].substring(1))
       signStack.push(lang[pos])
       pos += 1;
       description += `状态${statusStack[statusStack.length-1]}入栈`
@@ -486,18 +486,20 @@ function itemsInclude(items, item){  // 项目集中包含某个项目
 }
 
 function closure(item){  // 求闭包
-  let result = [];
-  for(i of item){
+  let result = [];  // 闭包结果集
+  for(i of item){  // 先把初始值放入集合
     result.push(i);
   }
-
-  for(let i = 0; i < result.length; i++){
+  // 对集合中的每一个添加新的元素
+  // (如果有新的元素加入，那么result.length也增加， 即可保证最后结果是不在增加的
+  for(let i = 0; i < result.length; i++){  
     item = result[i];
-    if(!isUpper(item['value'][item['dot']])){
+    if(!isUpper(item['value'][item['dot']])){ // A->·ab 的情况，不用管
       continue;
     }
-    for(let j = 0; j < itemSet.length; j++){
-      if(itemSet[j]['key'] == item['value'][item['dot']] && itemSet[j]['dot'] == 0 && !itemsInclude(result, itemSet[j])){  // 匹配活前缀
+    for(let j = 0; j < itemSet.length; j++){  // 发现S->·A 找到项目集中的A->·ab并插入闭包结果集
+      if(itemSet[j]['key'] == item['value'][item['dot']] && itemSet[j]['dot'] == 0 && 
+      !itemsInclude(result, itemSet[j])){  // 判断闭包结果集中是否已经存在该项目
         result.push(itemSet[j]);
       }
     }
